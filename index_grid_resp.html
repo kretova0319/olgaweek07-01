@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid - 2 Вариант</title>
+    <style>
+        /* Макет создан через grid.
+        Футер создан через grid */
+        body{
+            min-width: 320px;
+            font-size: 1em;
+            font-weight: bold;
+        }
+        .container{
+            background-color:  rgb(240, 238, 164);
+            display: grid;
+            text-align:center;
+            grid-template-columns: 33% 33% 34%;
+            grid-template-rows: 15% 35% 15% 15% 1fr;
+            grid-template-areas: 
+                "header header header"
+                "main0 main0 sidebar"
+                "main1 main2 sidebar"
+                "main3 main3 sidebar"
+                "footer footer footer";
+        }
+        header{
+            background-color: rgb(199, 197, 197);
+            grid-area: header;
+            padding: 30px;
+        } 
+        .main0{
+            background-color: rgb(240, 238, 164);
+            grid-area: main0;
+            padding-top: 30px;
+        } 
+        .main1{
+            background-color: rgb(235, 233, 112);
+            grid-area: main1;
+            margin: 10px 20px;
+            padding: 20px; 
+        } 
+        .main2{
+            background-color: rgb(235, 233, 112);
+            grid-area: main2;
+            margin: 10px 20px;
+            padding: 20px;
+        }
+        .main3{
+            background-color: rgb(235, 233, 112);
+            grid-area: main3;
+            margin: 10px 20px;
+            padding: 20px;
+        }
+        aside{
+            background-color: rgb(143, 214, 143);
+            grid-area: sidebar;
+            padding: 30px;
+        } 
+        footer{
+            background-color: rgb(199, 197, 197);
+            grid-area: footer;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr; 
+            gap: 1em;
+            padding: 0 20px;
+        }
+        .footerin{
+            background-color: rgb(240, 237, 237);
+            margin: 20px 0;
+        } 
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">Шапка страницы</header>
+        <div class="main0">Основная часть</div>
+        <div class="main1">Еще 1</div>
+        <div class="main2">Еще 2</div>
+        <div class="main3">Еще 3</div>
+        <aside class="sidebar">Боковая часть</aside>
+        <footer class="footer">
+            <div class="footerin">Секция футера 1</div>
+            <div class="footerin">Секция футера 2</div>
+            <div class="footerin">Секция футера 3</div>
+            <div class="footerin">Секция футера 4</div>
+        </footer>
+    </div>
+</body>
+</html>
+
+
